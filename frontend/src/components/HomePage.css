@@ -1,0 +1,14 @@
+.home-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+  }
+  
+  .bio-section img {
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+  }
+  
