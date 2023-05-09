@@ -30,3 +30,18 @@ class Testimonial(models.Model):
     name = models.CharField(max_length=100)
     text = models.TextField()
     profile_image = models.ImageField(upload_to='testimonials/', blank=True, null=True)
+
+class BookingSubmission(models.Model):
+    first_name = models.CharField(max_length=100)
+    last_name = models.CharField(max_length=100)
+    email = models.EmailField()
+    phone_number = models.CharField(max_length=20)
+    tattoo_description = models.TextField()
+    placement_location = models.CharField(max_length=100)
+    size_inches = models.DecimalField(max_digits=5, decimal_places=2)
+    budget_dollars = models.DecimalField(max_digits=10, decimal_places=2)
+    reference_photos = models.JSONField(blank=True, null=True)
+    submission_date = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.first_name} {self.last_name} - {self.tattoo_description}"

@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Artist, About, Tattoo, Testimonial
+from .models import Artist, About, Tattoo, Testimonial, BookingSubmission
 
 class ArtistSerializer(serializers.ModelSerializer):
     class Meta:
@@ -20,3 +20,10 @@ class TestimonialSerializer(serializers.ModelSerializer):
     class Meta:
         model = Testimonial
         fields = ('id', 'name', 'text', 'profile_image')
+
+class BookingSubmissionSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = BookingSubmission
+        fields = ('id', 'first_name', 'last_name', 'email', 'phone_number',
+                   'tattoo_description', 'placement_location', 'size_inches',
+                     'budget_dollars', 'reference_photos', 'submission_date')

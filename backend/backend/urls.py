@@ -24,6 +24,7 @@ router.register(r'artists', views.ArtistView, 'artist')
 router.register(r'about', views.AboutView, 'about')
 router.register(r'tattoos', views.TattooView, 'tattoo')
 router.register(r'testimonials', views.TestimonialView, 'testimonial')
+router.register(r'booking_submissions', views.BookingSubmissionView, 'booking_submission')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
